@@ -15,6 +15,9 @@ class Guerreiro extends Personagem{
   }
   
   ataqueEspada(){
+    if(this.força >= 1){
+        this.ataqueEspada = true
+    }
 
   }
 
@@ -29,7 +32,9 @@ class Mago extends Personagem{
       }
 
       usarFeitiço(){
-           
+        if(this.força >= 1){
+            this.usarFeitiço = true
+        }
       }
 
 }
@@ -41,6 +46,8 @@ class Arqueiro extends Personagem{
       }
 
       atirarFlecha(){
-
+        if(this.força >= 1){
+            this.atirarFlecha = true
+        }
       }
 }
