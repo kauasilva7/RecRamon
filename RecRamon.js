@@ -7,6 +7,23 @@ class Personagem{
         this.#força = força
         this.#mana = mana
     }
+
+    get vida() {
+        return this.#vida
+      }
+    
+      set vida(novaVida) {
+        this.#vida = novaVida
+      }
+    
+      get força() {
+        return this.#força
+      }
+
+      get mana(){
+        return this.#mana
+      }
+    
     
 }
 
@@ -17,22 +34,14 @@ class Guerreiro extends Personagem{
     }
    
     ataqueEspada(){
-      if(this.vida < 1){
-          this.ataqueEspada = true
+      if(this.vida <= 15){
+          this.ataqueEspada + 1
           console.log('Segura essa !')
       }
   
   }
    
-  get vidaAtual(){
-    return this.vida
-
-  }
-
-  set vidaAtual(vidaAtual){
-    return this.vida = vidaAtual
-  }
-  }
+}
 
 
 class Mago extends Personagem{
@@ -43,18 +52,9 @@ class Mago extends Personagem{
 
       usarFeitiço(){
         if(this.vida < 1){
-            this.usarFeitiço = true
-            console.log('Agora voce vai sentir a pressão')
+            this.usarFeitiço + 2
+            console.log('Agora você vai sentir a pressão')
         }
-      }
-
-      get vidaAtual(){
-        return this.vida
-    
-      }
-    
-      set vidaAtual(vidaAtual){
-        return this.vida = vidaAtual
       }
 
 
@@ -67,17 +67,14 @@ class Arqueiro extends Personagem{
 
       atirarFlecha(){
         if(this.vida < 1){
-            this.atirarFlecha = true
-            console.log('Segura essa flecha otario')
+            this.atirarFlecha + 4
+            console.log('Segura essa flecha otário')
         }
       }
 
-      get vidaAtual(){
-        return this.vida
-    
-      }
-    
-      set vidaAtual(vidaAtual){
-        return this.vida = vidaAtual
-      }
 }
+
+const oponente = new Personagem(20, 40, 15)
+const guerreiro = new Guerreiro(25, 50, 35)
+const mago = new Mago(15, 35, 40)
+const arqueiro = new Arqueiro(20, 25, 45)
