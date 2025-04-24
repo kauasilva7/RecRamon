@@ -17,8 +17,16 @@ class Guerreiro extends Personagem{
   }
 
 class Mago extends Personagem{
-
+    super(vida, força, mana){
+        this.vida = vida
+        this.força = força
+        this.mana = mana
+      }
 }
 class Arqueiro extends Personagem{
-
+    super(vida, força, mana){
+        this.vida = vida
+        this.força = força
+        this.mana = mana
+      }
 }
