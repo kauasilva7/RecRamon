@@ -23,7 +23,17 @@ class Guerreiro extends Personagem{
       }
   
   }
+   
+  get vidaAtual(){
+    return this.vida
+
   }
+
+  set vidaAtual(vidaAtual){
+    return this.vida = vidaAtual
+  }
+  }
+
 
 class Mago extends Personagem{
     constructor(vida, força, mana){
@@ -38,6 +48,16 @@ class Mago extends Personagem{
         }
       }
 
+      get vidaAtual(){
+        return this.vida
+    
+      }
+    
+      set vidaAtual(vidaAtual){
+        return this.vida = vidaAtual
+      }
+
+
 }
 class Arqueiro extends Personagem{
     constructor(vida, força, mana){
@@ -50,5 +70,14 @@ class Arqueiro extends Personagem{
             this.atirarFlecha = true
             console.log('Segura essa flecha otario')
         }
+      }
+
+      get vidaAtual(){
+        return this.vida
+    
+      }
+    
+      set vidaAtual(vidaAtual){
+        return this.vida = vidaAtual
       }
 }
