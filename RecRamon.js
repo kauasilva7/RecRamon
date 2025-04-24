@@ -1,53 +1,54 @@
 class Personagem{
+    #vida
+    #força
+    #mana
     constructor(vida, força, mana){
-        this.vida = vida
-        this.força = força
-        this.mana = mana
+        this.#vida = vida
+        this.#força = força
+        this.#mana = mana
     }
     
 }
 
 class Guerreiro extends Personagem{
-  super(vida, força, mana){
-    this.vida = vida
-    this.força = força
-    this.mana = mana
-  }
-  
-  ataqueEspada(){
-    if(this.força >= 1){
-        this.ataqueEspada = true
+    constructor(vida, força, mana){
+        super(vida, força, mana)
+
     }
-
+   
+    ataqueEspada(){
+      if(this.vida < 1){
+          this.ataqueEspada = true
+          console.log('Segura essa !')
+      }
+  
   }
-
   }
-
 
 class Mago extends Personagem{
-    super(vida, força, mana){
-        this.vida = vida
-        this.força = força
-        this.mana = mana
-      }
+    constructor(vida, força, mana){
+        super(vida, força, mana)
+
+    }
 
       usarFeitiço(){
-        if(this.força >= 1){
+        if(this.vida < 1){
             this.usarFeitiço = true
+            console.log('Agora voce vai sentir a pressão')
         }
       }
 
 }
 class Arqueiro extends Personagem{
-    super(vida, força, mana){
-        this.vida = vida
-        this.força = força
-        this.mana = mana
-      }
+    constructor(vida, força, mana){
+        super(vida, força, mana)
+
+    }
 
       atirarFlecha(){
-        if(this.força >= 1){
+        if(this.vida < 1){
             this.atirarFlecha = true
+            console.log('Segura essa flecha otario')
         }
       }
 }
